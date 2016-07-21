@@ -1,0 +1,77 @@
+/*keyframe animations*/
+@keyframes menu-fade-in{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 0.7;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+@keyframes menu-fad-in-2{
+	from{
+		opacity: 1;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+#menu{
+	color:blue;
+	background-color: #e3e3e3;
+	font-size: 40px;
+	opacity: 0;
+	animation-name:menu-fade-in;
+	animation-duration:5s;
+	animation-delay:1s;/*cuanto tiempo espera para funcionar*/
+	animation-interation-count:infinite;
+	animation-direction:alternate;
+	/*animation:menu-fade-in 2s 1s infinite alternate;*/
+}
+
+#menu.visible{
+	opacity: 1;
+}
+/*segundo ejemplo*/
+@keyframes square-to-circle{
+	0%{
+		border-radius: 0;
+		background-color:coral;
+		transform:rotate(0deg); 
+	}
+
+	25%{
+		border-radius: 50% 0 0 0;
+		background-color:darksalmon;
+		transform:rotate(45deg);  
+	}
+
+	50%{
+		border-radius: 50% 50% 0 0;
+		background-color:indianred; 
+		transform:rotate(90deg); 
+	}
+
+	75%{
+		border-radius: 50% 50% 50% 0;
+		background-color:lightcoral;
+		transform:rotate(135deg);  
+	}
+
+	100%{
+		border-radius: 50% 50% 50% 50%;
+		background-color:darksalmon;
+		transform:rotate(180deg);  
+	}
+}
+
+#figure{
+	width: 200px;
+	height: 200px;
+	background-color: coral;
+	animation: square-to-circle 2s 1s infinite alternate;
+}
